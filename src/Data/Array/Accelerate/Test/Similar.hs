@@ -3,7 +3,6 @@
 {-# LANGUAGE FlexibleContexts  #-}
 {-# LANGUAGE FlexibleInstances #-}
 {-# LANGUAGE TypeOperators     #-}
-{-# OPTIONS_HADDOCK hide #-}
 -- |
 -- Module      : Data.Array.Accelerate.Test.Similar
 -- Copyright   : [2017] Trevor L. McDonell
@@ -14,8 +13,12 @@
 -- Portability : non-portable (GHC extensions)
 --
 
-module Data.Array.Accelerate.Test.Similar
-  where
+module Data.Array.Accelerate.Test.Similar (
+
+  (~~~),
+  Similar(..),
+
+) where
 
 import Data.Array.Accelerate.Array.Sugar
 import Data.Array.Accelerate.Data.Complex

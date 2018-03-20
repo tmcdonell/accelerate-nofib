@@ -20,7 +20,6 @@ module Data.Array.Accelerate.Test.NoFib.Sharing (
 ) where
 
 import Data.Array.Accelerate                                        as A hiding ( exp )
-import Data.Array.Accelerate.Trafo.Sharing
 import Data.Array.Accelerate.Data.Bits                              as A
 
 import Control.DeepSeq
@@ -66,12 +65,12 @@ test_sharing =
   where
     sharingAcc :: Arrays a => Acc a -> Assertion
     sharingAcc acc =
-      catch (rnf (convertAcc True True True True acc) `seq` return ())
+      catch (rnf (show acc) `seq` return ())
             (\(e :: SomeException) -> assertFailure (show e))
 
     sharingExp :: Elt e => Exp e -> Assertion
     sharingExp exp =
-      catch (rnf (convertExp True exp) `seq` return ())
+      catch (rnf (show exp) `seq` return ())
             (\(e :: SomeException) -> assertFailure (show e))
 
 

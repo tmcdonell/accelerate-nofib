@@ -16,7 +16,7 @@ module Data.Array.Accelerate.Test.NoFib.Base
 
 import Data.Array.Accelerate.Array.Sugar                            ( Arrays, Array, Shape, Elt, DIM0, DIM1, DIM2, DIM3, Z(..), (:.)(..), fromList, size )
 import Data.Array.Accelerate.Smart                                  ( Acc )
-import Data.Array.Accelerate.Trafo.Sharing                          ( Afunction, AfunctionR )
+import Data.Array.Accelerate.Trafo                                  ( Afunction, AfunctionR )
 import Data.Array.Accelerate.Type
 
 import Control.Monad

@@ -1,5 +1,5 @@
 name:                 accelerate-nofib
-version:              1.2.0.0
+version:              0.1.0.0
 synopsis:             Regression test suite for the Accelerate language
 -- description:
 homepage:             http://acceleratehs.org
@@ -22,9 +22,60 @@ library
 
   build-depends:
           base                          >= 4.7 && < 4.12
+        , accelerate                    == 1.2.*
+        , containers                    >= 0.3
+        , deepseq                       >= 1.3
+        , hedgehog                      >= 0.5
+        , tasty                         >= 0.11
+        , tasty-expected-failure        >= 0.11
+        , tasty-hedgehog                >= 0.1
+        , tasty-hunit                   >= 0.9
 
-  -- exposed-modules:
-  -- other-modules:
+  exposed-modules:
+        Data.Array.Accelerate.Test.NoFib
+        Data.Array.Accelerate.Test.Similar
+
+  other-modules:
+        Data.Array.Accelerate.Test.NoFib.Base
+        Data.Array.Accelerate.Test.NoFib.Config
+        Data.Array.Accelerate.Test.NoFib.Sharing
+        Data.Array.Accelerate.Test.NoFib.Prelude
+        Data.Array.Accelerate.Test.NoFib.Prelude.Map
+        Data.Array.Accelerate.Test.NoFib.Prelude.ZipWith
+        Data.Array.Accelerate.Test.NoFib.Prelude.Fold
+        Data.Array.Accelerate.Test.NoFib.Prelude.Scan
+        Data.Array.Accelerate.Test.NoFib.Prelude.Backpermute
+        Data.Array.Accelerate.Test.NoFib.Prelude.Permute
+        Data.Array.Accelerate.Test.NoFib.Prelude.Filter
+        Data.Array.Accelerate.Test.NoFib.Prelude.Stencil
+        Data.Array.Accelerate.Test.NoFib.Imaginary
+        Data.Array.Accelerate.Test.NoFib.Imaginary.DotP
+        Data.Array.Accelerate.Test.NoFib.Imaginary.SASUM
+        Data.Array.Accelerate.Test.NoFib.Imaginary.SAXPY
+        Data.Array.Accelerate.Test.NoFib.Spectral
+        Data.Array.Accelerate.Test.NoFib.Spectral.SMVM
+        Data.Array.Accelerate.Test.NoFib.Spectral.RadixSort
+        Data.Array.Accelerate.Test.NoFib.Spectral.BlackScholes
+        Data.Array.Accelerate.Test.NoFib.Issues
+        Data.Array.Accelerate.Test.NoFib.Issues.Issue93
+        Data.Array.Accelerate.Test.NoFib.Issues.Issue102
+        Data.Array.Accelerate.Test.NoFib.Issues.Issue114
+        Data.Array.Accelerate.Test.NoFib.Issues.Issue119
+        Data.Array.Accelerate.Test.NoFib.Issues.Issue123
+        Data.Array.Accelerate.Test.NoFib.Issues.Issue137
+        Data.Array.Accelerate.Test.NoFib.Issues.Issue168
+        Data.Array.Accelerate.Test.NoFib.Issues.Issue184
+        Data.Array.Accelerate.Test.NoFib.Issues.Issue185
+        Data.Array.Accelerate.Test.NoFib.Issues.Issue187
+        Data.Array.Accelerate.Test.NoFib.Issues.Issue228
+        Data.Array.Accelerate.Test.NoFib.Issues.Issue255
+        Data.Array.Accelerate.Test.NoFib.Issues.Issue264
+        -- Data.Array.Accelerate.Test.NoFib.Issues.Issue286
+        Data.Array.Accelerate.Test.NoFib.Issues.Issue287
+        Data.Array.Accelerate.Test.NoFib.Issues.Issue288
+        Data.Array.Accelerate.Test.NoFib.Issues.Issue362
+        Data.Array.Accelerate.Test.NoFib.Issues.Issue407
+        Data.Array.Accelerate.Test.NoFib.Issues.Issue409
 
   ghc-options:
         -Wall
